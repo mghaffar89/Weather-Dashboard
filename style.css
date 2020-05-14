@@ -3,3 +3,11 @@
   height: 4rem;
   margin-bottom: 0px;
 }
+
+/* still having probs with margin and padding */
+.searchCol {
+  height: 100vh;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  margin-right: -1rem;
+}
