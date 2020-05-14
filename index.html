@@ -10,6 +10,53 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 </html>
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-5 text-center">Weather Dashboard</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3 searchCol">
+        <h4>Search for a city:</h4>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="cityInput"
+            placeholder="City Name"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-primary"
+              type="button"
+              id="searchBtn"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="list-group" id="cityList"></div>
+      </div>
+
+      <div class="col-9">
+        <div class="card" style="width: 100%;" id="weatherContainer"></div>
+        <div id="forecastContainer"></div>
+      </div>
+    </div>
+  </div>
+</body>
