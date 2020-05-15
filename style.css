@@ -11,3 +11,28 @@
   padding-right: 1rem;
   margin-right: -1rem;
 }
+
+.low {
+  background-color: green;
+  color: white;
+}
+
+.moderate {
+  background-color: yellow;
+  color: black;
+}
+
+.high {
+  background-color: orange;
+  color: black;
+}
+
+.vhigh {
+  background-color: orangered;
+  color: white;
+}
+
+.extreme {
+  background-color: red;
+  color: white;
+}
