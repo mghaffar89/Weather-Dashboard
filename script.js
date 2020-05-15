@@ -10,6 +10,7 @@ function renderCities() {
   $("#cityList").empty();
   $("#cityInput").val("");
 
+  var i;
   for (i = 0; i < cityList.length; i++) {
     var a = $("<a>");
     a.addClass(
@@ -89,7 +90,6 @@ function displayWeather() {
   var currentCityEl = $("<h3 class = 'card-body'>").text(
     getCurrentCity + " (" + val + ")"
   );
-  currentCityEl.append(displayCurrentWeatherIcon);
   currentWeatherDiv.append(currentCityEl);
 
   var getTemp = response.main.temp.toFixed(1);
@@ -141,9 +141,9 @@ function displayWeather() {
 }
 
 function historyDisplayWeather() {
-  cityname = $(this).attr("data-name");
+  cityName = $(this).attr("data-name");
   displayWeather();
-  console.log(cityname);
+  console.log(cityName);
 }
 
 $(document).on("click", ".city", historyDisplayWeather);
