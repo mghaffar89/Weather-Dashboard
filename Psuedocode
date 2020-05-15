@@ -14,4 +14,16 @@ have to use JSON - parse, int, stringify
 .val for jquery 
 dont forget to use 
 prepend and append 
-what is async and await function in JS? 
+what is async and await function in JS? better to use? 
+
+if UVindex is greater than 0 and less than 2.99 it will be low 
+low is green 
+if UVindex is greater than 3 and less than 5.99 it will be moderate 
+moderate is yellow 
+if UVindex is greater than 6 but less than 7.99 it wil be high 
+high is orange 
+if UVindex is greater than 8 but less than 10.99 it is very high 
+very high is light red 
+if UVindex is greater than 11 than it is extreme 
+extreme is dark red 
+
