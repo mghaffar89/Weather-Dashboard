@@ -139,3 +139,11 @@ function displayWeather() {
   currentWeatherDiv.append(uvIndexEl);
   $("#weatherContainer").html(currentWeatherDiv);
 }
+
+function historyDisplayWeather() {
+  cityname = $(this).attr("data-name");
+  displayWeather();
+  console.log(cityname);
+}
+
+$(document).on("click", ".city", historyDisplayWeather);
