@@ -1,5 +1,5 @@
 var cityList = [];
-var cityname;
+var cityName;
 
 // calling on the local storage
 initCityList();
@@ -34,7 +34,7 @@ function initWeather() {
   var storedWeather = JSON.parse(localStorage.getItem("currentCity"));
 
   if (storedWeather !== null) {
-    cityname = storedWeather;
+    cityName = storedWeather;
 
     displayWeather();
     displayFiveDayForecast();
@@ -45,21 +45,21 @@ function storeCityArray() {
   localStorage.setItem("cities", JSON.stringify(cityList));
 }
 function storeCurrentCity() {
-  localStorage.setItem("currentCity", JSON.stringify(cityname));
+  localStorage.setItem("currentCity", JSON.stringify(cityName));
 }
 
 //event listener on click for the search button
 $("#searchBtn").on("click", function (event) {
   event.preventDefault();
 
-  cityname = $("#cityInput").val().trim();
-  if (cityname === "") {
+  cityName = $("#cityInput").val().trim();
+  if (cityName === "") {
     alert("Please enter a city to look up");
   } else if (cityList.length >= 5) {
     cityList.shift();
-    cityList.push(cityname);
+    cityList.push(cityName);
   } else {
-    cityList.push(cityname);
+    cityList.push(cityName);
   }
   storeCurrentCity();
   storeCityArray();
@@ -72,7 +72,7 @@ $("#searchBtn").on("click", function (event) {
 function displayWeather() {
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
-    cityname +
+    cityName +
     "&units=imperial&appid=667b640793ff41c55d2a26c7d8568bb6";
 
   var response = $.ajax({
