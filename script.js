@@ -1,12 +1,11 @@
-// Global variable declarations
 var cityList = [];
-var cityName;
+var cityname;
 
 // local storage functions
 initCityList();
 initWeather();
 
-// function to take city from user input
+//function to display the city entered by user
 function renderCities() {
   $("#cityList").empty();
   $("#cityInput").val("");

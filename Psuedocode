@@ -1,0 +1,17 @@
+Create 3 sections - one for search bar, one header for app title and then a main container that will display current weather and the forecast
+search button needs to be linked to an event listener which will run the ajax call to the weather API to pull info 
+need to set up local storage 
+also need to be able to call on local storage to list out past searches 
+past cities need to have a click function where you can go back and recall the weather 
+
+
+
+
+
+Notes/Logic/Terms: 
+look up how to use terms like render and display 
+have to use JSON - parse, int, stringify 
+.val for jquery 
+dont forget to use 
+prepend and append 
+what is async and await function in JS? 
