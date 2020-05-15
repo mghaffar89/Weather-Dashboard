@@ -86,7 +86,6 @@ function displayWeather() {
   var date = new Date();
   var val =
     date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear();
-  var getCurrentWeatherIcon = response.weather[0].icon;
   var currentCityEl = $("<h3 class = 'card-body'>").text(
     getCurrentCity + " (" + val + ")"
   );
@@ -119,4 +118,24 @@ function displayWeather() {
     url: uvURL,
     method: "GET",
   });
+
+  //Attempt 1
+  var getUVNumber = uvResponse.value;
+  var uVNumber = $("<span>");
+  if (getUVNumber > 0 && getUVNumber <= 2.99) {
+    uVNumber.addClass("low");
+  } else if (getUVNumber > 3 && getUVNumber <= 5.99) {
+    uVNumber.addclass("moderate");
+  } else if (getUVNumber > 6 && getUVNumber <= 7.99) {
+    uVNumber.addclass("high");
+  } else if (getUVNumber > 8 && getUVNumber <= 10.99) {
+    uVNumber.addclass("veryhigh");
+  } else {
+    uVNumber.addclass("extreme");
+  }
+  uVNumber.text(getUVNumber);
+  var uvIndexEl = $("<p>").text("UV Index: ");
+  uVNumber.appendTo(uvIndexEl);
+  currentWeatherDiv.append(uvIndexEl);
+  $("#weatherContainer").html(currentWeatherDiv);
 }
